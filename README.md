@@ -109,7 +109,7 @@ An order is stored with the following information in the database:
 - price: The item price applied to the order. This is an adjusted price, which will be 10% above the item price if it
 has been viewed 10 times within the hour preceding order creation.
 
-### List Orders (POST /orders)
+### List Orders (GET /orders)
 
 Just for the convenience to view created orders, an order list endpoint is available that will return all orders in the
 system. Like the create endpoint, this is also protected by basic authentication: `curl --user user:password http://localhost:8080/orders`
