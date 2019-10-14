@@ -43,6 +43,22 @@ complexity.
 For simplicity, I chose to implement BASIC authentication for this project.  For a more complex project, I would
 consider using oauth.  However, this would have required expanded scope to generate and validate tokens.
 
+There is a single in memory predefined user available with a username of `user` and password of `password`.
+
+### Preset Data
+
+This system uses an embedded H2 database for Items and Orders which is populated with preset data at runtime.  The data
+consists of 3 items with varying quantity.
+
+When an order is created for an item, its quantity will be decremented.  These are the initial values of the preset
+items:
+
+Name|Description|Price|Quantity
+----|-----------|:---:|:------:
+iPhone 7|Old iPhone|99|1
+iPhone 11|New iPhone|1099|300
+Pixel 2|Google's Phone|799|3
+
 ## System Requirements
 Java 11 is required on the path when running from the command line.  Commands in this document assume that you are
 running a Mac or Linux compatible shell, but there is also a `gradlew.bat` file available for Windows users.
